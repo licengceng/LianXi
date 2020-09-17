@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="June19_SpringMVC_day2_03文件上传之跨服务器上传" />
+        <module name="June28_SpringMVC_day02_04拦截器" />
+        <module name="June14_SpringMVC_day2_01response" />
+        <module name="June_21_SpringMVC_day2_03_exception" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="dao.AccountDao"> <!--AccountDao路径-->
+
+    <!--定义封装account和user的resultMap-->
+    <resultMap id="accountUserMap" type="domain.Account">
+        <id property="id" column="id"></id>
+        <result property="uid" column="uid"></result>
+        <result property="money" column="money"></result>
+        <!--一对一的关系映射，配置封装user的内容 column中指名从表的外键 -->
+        <!--property="user"指的是单个实体类的引用 column中指名从表的外键  javatype封装到实体类-->
+        <association property="user" column="uid" javaType="domain.User">
+            <id property="id" column="id"></id>
+            <result property="username" column="username"></result>
+            <result property="address" column="address"></result>
+        </association>
+    </resultMap>
+    <!--查询所有账户，并且带有用户名称和地址信息-->
+    <select id="findAllAccount" resultMap="accountUserMap">/*引用上面resultMap的id resultype 对应实体类路径*/
+        SELECT u.id,u.username,u.address,a.`id`,a.`uid`,a.money FROM USER u,account a WHERE u.id = a.uid;
+    </select>
+
+
+    <!--查询所有-->
+    <select id="findAll" resultType="domain.Account">/*resultype 对应实体类路径*/
+        select *from account ;
+    </select>
+
+
+</mapper>

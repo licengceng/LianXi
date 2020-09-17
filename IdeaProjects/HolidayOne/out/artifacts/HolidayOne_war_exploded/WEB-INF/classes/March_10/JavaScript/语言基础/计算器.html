@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function add() {
+            var number1=document.getElementById("text1").value;
+            var number2 =document.getElementById("text2").value;
+            /*对获取的值进行计算,注意要转换为Number类型*/
+             var result=parseInt(number1)+parseInt(number2);
+             document.getElementById("addresult").value =result;
+            //document.write(result);
+        }
+    </script>
+</head>
+<style>
+    #text1{
+        width:5px;
+    }
+    #text2{
+        width:20px;
+    }
+</style>
+<body>
+    <input type="text" id="text1">+<input type="text" id="text2">=<input type="button" id="button" value="取值" onclick="add()">
+    <br/>
+    <input type="text" id="addresult">
+
+</body>
+</html>

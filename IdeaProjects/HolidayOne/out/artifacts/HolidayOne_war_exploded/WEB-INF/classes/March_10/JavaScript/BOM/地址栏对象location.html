@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    var d = new Date();
+    document.write(d.getHours());
+    document.write(":");
+    document.write(d.getMinutes());
+    document.write(":");
+    document.write(d.getSeconds());
+    document.write(":");
+    document.write(d.getMilliseconds());
+
+    function refresh(){
+        location.reload();//reload方法刷新当前页面
+    }
+    function jump(){
+        //方法1
+        //location="/";
+
+        //方法2
+        location.assign("http://www.baidu.com"); 跳转到另一个页面
+
+    }
+</script>
+<body>
+<br>
+<button onclick="refresh()">刷新当前页面</button>
+<button onclick="jump()">跳转到百度网页</button>
+</body>
+</html>

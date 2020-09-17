@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/mvc
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--开启注解扫描-->
+    <context:component-scan base-package="controller"></context:component-scan>
+<!--   开启注解扫描,只扫描Controller注解       看此处和bean.xml区别-->
+<!--    <context:component-scan base-package="cn.itcast">-->
+<!--        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
+<!--    </context:component-scan>-->
+
+    <!--视图解析器对象-->
+    <bean id="internalResourceViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!--前端控制器，那些静态资源不拦截-->
+    <mvc:resources location="/js/" mapping="/js/**"/> <!--该路径下的所有资源都不会被拦截-->
+
+<!--    &lt;!&ndash;自定义类型转换器&ndash;&gt;-->
+<!--    <bean id="ConversionService" class="org.springframework.context.support.ConversionServiceFactoryBean">-->
+<!--        <property name="converters"> &lt;!&ndash;注入&ndash;&gt;-->
+<!--            <set>-->
+<!--                <bean class="utils.StringToDateConverter" />-->
+<!--            </set>-->
+<!--        </property>-->
+<!--    </bean>-->
+<!--    &lt;!&ndash;开启springmvc注解的支持&ndash;&gt;-->
+<!--    <mvc:annotation-driven conversion-service="ConversionService" />-->
+
+    <mvc:view-controller path="/success" view-name="success"/>
+
+    <!--开启springmvc注解的支持-->
+    <mvc:annotation-driven />
+</beans>

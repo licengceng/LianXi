@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="June19_SpringMVC_day2_03文件上传之跨服务器上传" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="June19_SpringMVC_day2_03文件上传之跨服务器上传" target="1.8" />
+      <module name="June_16SpringMVC_day2_02fileupload" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../June19_SpringMVC_day2_03文件上传之跨服务器上传/June19_SpringMVC_day2_03文件上传之跨服务器上传.iml" filepath="$PROJECT_DIR$/../June19_SpringMVC_day2_03文件上传之跨服务器上传/June19_SpringMVC_day2_03文件上传之跨服务器上传.iml" />
+      <module fileurl="file://$PROJECT_DIR$/June_16SpringMVC_day2_02fileupload.iml" filepath="$PROJECT_DIR$/June_16SpringMVC_day2_02fileupload.iml" />
+    </modules>
+  </component>
+</project>

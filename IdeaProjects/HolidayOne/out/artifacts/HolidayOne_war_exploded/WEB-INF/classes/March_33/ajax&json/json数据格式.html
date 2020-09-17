@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    //1.定义基本格式
+    var person={"name":"zhangsan","age":23,'gender':true};//引号号单双都行，都注意要写定一种，规范格式
+    alert(person);
+    //获取name的值
+    var name = person.name;
+    alert(name);//zhangsan
+    //2.嵌套格式  []-->{}
+    var persons={                                      //这里persons是一个json对象 ，有一个键叫persons
+        "persons":[
+            {"name":"zhangsan","age":24,"gender":true},
+            {"name":"lisi","age":24,"gender":true},
+            {"name":"王五","age":25,"gender":false}
+            ]
+    };
+    alert(persons);
+    var name1 = persons.persons[1].name;
+    var age = persons.persons[2].age;
+    alert(name1);//lisi
+    alert(age);//25
+
+    var ps=[{"name":"zhangsan","age":24,"gender":true}, //这里ps其实是数组
+        {"name":"lisi","age":24,"gender":true},
+        {"name":"王五","age":25,"gender":false}
+        ];
+    alert(ps);
+    alert(ps[0].name);//zhangsan
+    alert(ps[1].name);//lisi
+    alert(ps[2].name);//王五
+</script>
+<body>
+
+</body>
+</html>

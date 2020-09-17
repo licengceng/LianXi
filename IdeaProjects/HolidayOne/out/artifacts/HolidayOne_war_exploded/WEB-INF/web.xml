@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+        <!--配置servlet-->
+    <servlet>
+        <servlet-name>demo1</servlet-name>
+        <servlet-class>March_20.Servlet._01Servlet快速入门</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>demo1</servlet-name>
+        <url-pattern>/demo1</url-pattern>
+    </servlet-mapping>
+    
+<!--    <filter>-->
+<!--        <filter-name>demo1</filter-name>-->
+<!--        <filter-class>March_32._1Filter过滤器快速入门</filter-class>-->
+<!--    </filter>-->
+<!--    <filter-mapping>-->
+<!--        <filter-name>demo1</filter-name>-->
+<!--        &lt;!&ndash;拦截路径  这里表示访问所有资源都会经过此过滤器&ndash;&gt;-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+</web-app>

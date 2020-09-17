@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person={"name":"zhangsan","age":23,'gender':true};
+        //获取person对象中所有的键和值
+        //for in循环
+        for(var key in person){
+            alert(key);
+            alert(key+":"+person[key]);
+        }
+
+        var ps=[{"name":"zhangsan","age":24,"gender":true}, //这里ps其实是数组
+            {"name":"lisi","age":24,"gender":true},
+            {"name":"王五","age":25,"gender":false}
+        ];
+        //获取ps的所有值
+        for (var i = 0; i <ps.length ; i++) { //ps是一个数组
+            var p = ps[i];
+            for (var key in p){
+                alert(key+":"+p[key]);
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>//注:window.方法（）, window可省略 即直接可写：方法名（）
+
+    // 有的时候，你碰到一些网站会自动打开另一个网站，那么是怎么做到的呢?
+    // 就是通过window.open()方法做到的
+    // 不建议使用，如果需要打开一个新的网站，应该通过超级链接等方式让用户主动打开，在没有告知用户的前提下就打开一个新的网站会影响用户的体验
+    function win_open() {
+        window.open("http://www.baidu.com");
+    }
+    function register(){
+        alert("注册成功");//警告框 alert，常用于消息提示，比如注册成功等等
+    }
+    function del(){
+        var d = confirm("是否要删除");//确认框 confirm，常用于危险性操作的确认提示。 比如删除一条记录的时候，弹出确认框
+        alert(typeof d + " " + d);// confirm返回基本类型的Boolean true或者false
+    }
+
+    function showTimeIn3Seconds(){
+        setTimeout(printTime,3000);
+    }//函数setTimeout(functionname, 距离开始时间毫秒数 );
+  //  通过setTimeout在制定的毫秒数时间后，执行一次 函数functionname
+  //  本例在3秒钟后，打印当前时间。
+    //document.getElementById 获取id=time的div元素    .innerHTML修改该元素的内容
+    function printTime(){
+        var d = new Date();
+        var h= d.getHours();
+        var m= d.getMinutes();
+        var s= d.getSeconds();
+        document.getElementById("time").innerHTML= h+":"+m+":"+s;
+
+    }
+
+    function printTime2(){
+        var d = new Date();   //函数setInterval(函数名, 重复执行的时间间隔毫秒数 );
+        var h= d.getHours(); //通过setInterval重复执行同一个函数，重复的时间间隔由第二个参数指定
+        var m= d.getMinutes();
+        var s= d.getSeconds();
+        document.getElementById("time2").innerHTML= h+":"+m+":"+s;
+
+    }
+    var t = window.setInterval(printTime2,1000);
+</script>
+</head>
+<body>
+    <input type="button" value="打开窗口" onclick="win_open()">
+    <button onclick="register()">注册</button>
+
+    <div id="time"></div>
+    <button onclick="showTimeIn3Seconds()">点击后3秒钟后显示当前时间，并且只显示一次</button>
+    <p>每隔1秒钟，打印当前时间</p>
+    <div id="time2"></div>
+
+</body>
+</html>

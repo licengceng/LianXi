@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="June19_SpringMVC_day2_03文件上传之跨服务器上传:war">
+    <output-path>$PROJECT_DIR$/../June19_SpringMVC_day2_03文件上传之跨服务器上传/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>June19_SpringMVC_day2_03文件上传之跨服务器上传</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="June19_SpringMVC_day2_03文件上传之跨服务器上传.war">
+      <element id="artifact" artifact-name="June19_SpringMVC_day2_03文件上传之跨服务器上传:war exploded" />
+    </root>
+  </artifact>
+</component>

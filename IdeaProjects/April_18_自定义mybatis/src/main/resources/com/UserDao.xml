@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+  <mapper namespace="dao.UserDao"> <!--UserDao路径-->
+    
+    <select id="findAll" resultType="domain.User">/*resultype 对应实体类路径*/
+        select *from user ;
+    </select>
+</mapper>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap 引入本地资源 当前目录下-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery (也可引入本地jquery) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <!--引入本地资源   -->
+    <script src="js/bootstrap.min.js"></script>
+</head>
+<style>
+    .inner{
+        border: 1px solid red;
+    }
+</style>
+<body>
+<h1 align="center" color="red">栅格系统</h1>
+<!--响应式布局--栅格系统会将手机，平板，电脑屏幕的一行平均分为12个格子 可以指定元素占几个格子-->
+<!--定义容器 每个设备都是100%宽度-->
+<div class="container-fluid">
+        <!--定义行-->
+    <div class="row"></div>
+            <!-- 定义元素 （列）每个div元素占大显示器(lg)屏幕一行的1个格子,在pad（小屏幕sm）上每个元素占2个格子
+              即pad上屏幕宽度一行可放6个元素 超出部分则换行  这里再添加边框样式-->
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+        <div class="col-lg-1 col-sm-2 inner" >栅格</div>
+
+</div>
+</body>
+</html>

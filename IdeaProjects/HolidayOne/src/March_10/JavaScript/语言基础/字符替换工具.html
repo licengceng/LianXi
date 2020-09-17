@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<script>
+    function replace() {
+        // document.write("进入方法");
+        var text1=$("text1");//原文本 var text1~text4均为String类型
+        var text2=$("text2");//查询文本
+        var text3=$("text3");//替换
+        var text4=$("text4");
+       var regExp=new RegExp(text2,"g");
+       text4=text1.replace(regExp,text3);
+
+           document.getElementById("text4").value=text4;
+
+    }
+    function $(id){
+        return document.getElementById(id).value;
+    }
+</script>
+<style>
+    input#text1{
+        width: 80px;
+        height: 50px;
+    }
+    input#text4{
+        width: 80px;
+        height: 50px;
+    }
+</style>
+<body>字符替换工具<br>
+   源字符串： <input type="text" id="text1" ><br>
+   查询：&nbsp&nbsp&nbsp<input type="text" id="text2"><br>
+   替换为：<input type="text" id="text3"><br>
+   替换结果为：<input type="text" id="text4"><br>
+
+    <input type="button"  onclick="replace()" id="result" value="生成">
+
+
+</body>
+</html>
